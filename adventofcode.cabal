@@ -55,3 +55,8 @@ executable 04_advent_coins
   ghc-options: -dynamic
   build-depends: base, bytestring, cryptohash-md5, directory
   main-is:       04_advent_coins.hs
+
+executable 05_nice_strings
+  import: bin, flags
+  build-depends: base, adventofcode, containers
+  main-is:       05_nice_strings.hs
