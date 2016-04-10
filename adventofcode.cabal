@@ -1,0 +1,46 @@
+cabal-version: 2.2
+-- cabal 2.2 for common stanzas
+
+name: adventofcode
+version: 1.0
+build-type: Simple
+
+common flags
+  default-language: Haskell2010
+  ghc-options:
+    -Weverything
+    -Wno-all-missed-specialisations
+    -Wno-implicit-prelude
+    -Wno-missed-specialisations
+    -Wno-missing-deriving-strategies
+    -- in GHC 9.0.1, enabling -Wmissing-exported-signatures disabled stricter -Wmissing-signatures
+    -- this was fixed in GHC 9.2.1, so it's safe to keep this now.
+    -- (Not mentioned in release notes, but git tag --contains e1f133bf5ee30f25a94b4f3bf4d26d1a9381f0d9)
+    ---Wno-missing-exported-signatures
+    -Wno-missing-import-lists
+    -Wno-missing-kind-signatures
+    -Wno-missing-local-signatures
+    -Wno-missing-safe-haskell-mode
+    -Wno-monomorphism-restriction
+    -Wno-prepositive-qualified-module
+    -Wno-safe
+    -Wno-unsafe
+
+common bin
+  hs-source-dirs: bin
+
+library
+  import: flags
+  hs-source-dirs:  lib
+  exposed-modules: AdventOfCode
+  build-depends:   base
+
+executable 01_count_parens
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       01_count_parens.hs
+
+executable 02_presents
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       02_presents.hs
