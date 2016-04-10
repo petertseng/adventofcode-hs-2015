@@ -82,7 +82,7 @@ executable 04_advent_coins
 
 executable 05_nice_strings
   import: bin, flags
-  build-depends: base, adventofcode
+  build-depends: base, adventofcode, regex-pcre
   main-is:       05_nice_strings.hs
 
 executable 06_light_grid
