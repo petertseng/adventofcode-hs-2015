@@ -49,3 +49,8 @@ executable 03_delivery_grid
   import: bin, flags
   build-depends: base, adventofcode, containers
   main-is:       03_delivery_grid.hs
+
+executable 04_advent_coins
+  import: bin, flags
+  build-depends: base, bytestring, cryptohash-md5, directory
+  main-is:       04_advent_coins.hs
