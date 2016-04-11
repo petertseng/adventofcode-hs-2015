@@ -58,3 +58,8 @@ executable 05_nice_strings
   import: bin, flags
   build-depends: base, adventofcode, containers
   main-is:       05_nice_strings.hs
+
+executable 06_light_grid
+  import: bin, flags
+  build-depends: base, adventofcode, array
+  main-is:       06_light_grid.hs
