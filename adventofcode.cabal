@@ -66,3 +66,9 @@ executable 06_light_grid
   -- modifyArray added in array 0.5.6.0
   build-depends: base, adventofcode, array >= 0.5.6.0
   main-is:       06_light_grid.hs
+
+executable 07_logic_gates
+  import: bin, flags
+  -- Data.Map.Strict added in containers 0.5.0.0
+  build-depends: base, adventofcode, containers >= 0.5, mtl
+  main-is:       07_logic_gates.hs
