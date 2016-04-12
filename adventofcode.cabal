@@ -35,6 +35,12 @@ library
   exposed-modules: AdventOfCode
   build-depends:   base
 
+library aocpw
+  import: flags
+  hs-source-dirs:  lib
+  exposed-modules: AdventOfCode.Password
+  build-depends:   base
+
 executable 01_count_parens
   import: bin, flags
   build-depends: base, adventofcode
@@ -88,3 +94,8 @@ executable 10_look_and_say
   import: bin, flags
   build-depends: base, array, directory
   main-is:       10_look_and_say.hs
+
+executable 11_passwords
+  import: bin, flags
+  build-depends: base, aocpw, directory
+  main-is:       11_passwords.hs
