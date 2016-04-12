@@ -83,3 +83,8 @@ executable 09_hamiltonian
   -- Data.Map.Strict added in containers 0.5.0.0
   build-depends: base, adventofcode, containers >= 0.5
   main-is:       09_hamiltonian.hs
+
+executable 10_look_and_say
+  import: bin, flags
+  build-depends: base, directory
+  main-is:       10_look_and_say.hs
