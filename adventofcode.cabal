@@ -86,5 +86,5 @@ executable 09_hamiltonian
 
 executable 10_look_and_say
   import: bin, flags
-  build-depends: base, directory
+  build-depends: base, array, directory
   main-is:       10_look_and_say.hs
