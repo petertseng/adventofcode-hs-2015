@@ -110,3 +110,8 @@ executable 11_passwords
   import: bin, flags
   build-depends: base, aocpw, directory
   main-is:       11_passwords.hs
+
+executable 12_json_numbers
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       12_json_numbers.hs
