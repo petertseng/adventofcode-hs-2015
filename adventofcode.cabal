@@ -142,3 +142,8 @@ executable 16_aunt_sue
   import: bin, flags
   build-depends: base, adventofcode, aocsplit, containers
   main-is:       16_aunt_sue.hs
+
+executable 17_containers
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       17_containers.hs
