@@ -126,3 +126,8 @@ executable 14_reindeer_race
   import: bin, flags
   build-depends: base, adventofcode
   main-is:       14_reindeer_race.hs
+
+executable 15_cookies
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       15_cookies.hs
