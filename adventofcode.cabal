@@ -145,5 +145,5 @@ executable 16_aunt_sue
 
 executable 17_containers
   import: bin, flags
-  build-depends: base, adventofcode
+  build-depends: base, adventofcode, containers
   main-is:       17_containers.hs
