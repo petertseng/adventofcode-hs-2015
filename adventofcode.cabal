@@ -40,6 +40,12 @@ library aocpw
   exposed-modules: AdventOfCode.Password
   build-depends:   base
 
+library aocsplit
+  import: flags
+  hs-source-dirs:  lib
+  exposed-modules: AdventOfCode.Split
+  build-depends:   base
+
 test-suite test-password
   import: flags
   type:           exitcode-stdio-1.0
@@ -58,7 +64,7 @@ executable 01_count_parens
 
 executable 02_presents
   import: bin, flags
-  build-depends: base, adventofcode
+  build-depends: base, adventofcode, aocsplit
   main-is:       02_presents.hs
 
 executable 03_delivery_grid
@@ -126,5 +132,5 @@ executable 14_reindeer_race
 
 executable 15_cookies
   import: bin, flags
-  build-depends: base, adventofcode
+  build-depends: base, adventofcode, aocsplit
   main-is:       15_cookies.hs
