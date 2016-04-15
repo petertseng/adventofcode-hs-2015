@@ -147,3 +147,8 @@ executable 17_containers
   import: bin, flags
   build-depends: base, adventofcode, containers
   main-is:       17_containers.hs
+
+executable 18_game_of_life
+  import: bin, flags
+  build-depends: base, adventofcode, array
+  main-is:       18_game_of_life.hs
