@@ -162,5 +162,5 @@ executable 19_molecule_replacement
 
 executable 20_factors
   import: bin, flags
-  build-depends: base, directory
+  build-depends: base, array, directory
   main-is:       20_factors.hs
