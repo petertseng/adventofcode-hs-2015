@@ -153,3 +153,9 @@ executable 18_game_of_life
   -- modifyArray added in array 0.5.6.0
   build-depends: base, adventofcode, array >= 0.5.6.0
   main-is:       18_game_of_life.hs
+
+executable 19_molecule_replacement
+  import: bin, flags
+  -- Data.Map.Strict added in containers 0.5.0.0
+  build-depends: base, adventofcode, containers >= 0.5
+  main-is:       19_molecule_replacement.hs
