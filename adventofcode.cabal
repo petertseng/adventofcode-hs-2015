@@ -164,3 +164,8 @@ executable 20_factors
   import: bin, flags
   build-depends: base, array, directory
   main-is:       20_factors.hs
+
+executable 21_rpg
+  import: bin, flags
+  build-depends: base
+  main-is:       21_rpg.hs
