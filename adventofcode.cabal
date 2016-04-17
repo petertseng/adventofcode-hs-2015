@@ -169,3 +169,8 @@ executable 21_rpg
   import: bin, flags
   build-depends: base
   main-is:       21_rpg.hs
+
+executable 22_wizard
+  import: bin, flags
+  build-depends: base, containers, mtl
+  main-is:       22_wizard.hs
