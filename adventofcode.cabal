@@ -174,3 +174,8 @@ executable 22_wizard
   import: bin, flags
   build-depends: base, containers, mtl
   main-is:       22_wizard.hs
+
+executable 23_asm
+  import: bin, flags
+  build-depends: base, adventofcode, array
+  main-is:       23_asm.hs
