@@ -179,3 +179,8 @@ executable 23_asm
   import: bin, flags
   build-depends: base, adventofcode, array
   main-is:       23_asm.hs
+
+executable 24_partition
+  import: bin, flags
+  build-depends: base, adventofcode
+  main-is:       24_partition.hs
