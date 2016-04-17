@@ -184,3 +184,8 @@ executable 24_partition
   import: bin, flags
   build-depends: base, adventofcode
   main-is:       24_partition.hs
+
+executable 25_triangular
+  import: bin, flags
+  build-depends: base
+  main-is:       25_triangular.hs
