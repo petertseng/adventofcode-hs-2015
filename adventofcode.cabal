@@ -87,7 +87,7 @@ executable 05_nice_strings
 executable 06_light_grid
   import: bin, flags
   -- modifyArray added in array 0.5.6.0
-  build-depends: base, adventofcode, array >= 0.5.6.0
+  build-depends: base, adventofcode, aocsplit, array >= 0.5.6.0
   main-is:       06_light_grid.hs
 
 executable 07_logic_gates
