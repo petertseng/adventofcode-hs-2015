@@ -84,7 +84,7 @@ executable 05_nice_strings
 
 executable 06_light_grid
   import: bin, flags
-  build-depends: base, adventofcode, array
+  build-depends: base, adventofcode, aocsplit, array
   main-is:       06_light_grid.hs
 
 executable 07_logic_gates
