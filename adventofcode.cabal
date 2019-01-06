@@ -41,6 +41,17 @@ library aocpw
   exposed-modules: AdventOfCode.Password
   build-depends:   base
 
+test-suite test-password
+  import: flags
+  type:           exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is:        password.hs
+  -- without -dynamic:
+  -- Could not find module ‘Test.HUnit
+  -- There are files missing in the ‘HUnit-1.6.0.0’ package,
+  ghc-options:    -dynamic
+  build-depends:  base, aocpw, HUnit
+
 executable 01_count_parens
   import: bin, flags
   build-depends: base, adventofcode
