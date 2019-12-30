@@ -81,7 +81,7 @@ executable 04_advent_coins
 
 executable 05_nice_strings
   import: bin, flags
-  build-depends: base, adventofcode, containers
+  build-depends: base, adventofcode
   main-is:       05_nice_strings.hs
 
 executable 06_light_grid
