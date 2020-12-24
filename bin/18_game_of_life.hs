@@ -1,10 +1,11 @@
-{-# LANGUAGE TupleSections #-}
-
 import AdventOfCode (readInputFile)
 
 import qualified Data.Array as Arr
 import Data.Array (Array, bounds, listArray)
-import Data.Array.Unboxed (UArray, accumArray, assocs)
+import Data.Array.Unboxed (UArray, assocs)
+import Data.Array.MArray (newArray, readArray, writeArray)
+import Data.Array.ST (runSTUArray)
+import Data.Foldable (for_)
 import Data.List (elemIndices)
 import Data.Maybe (mapMaybe)
 
@@ -15,8 +16,15 @@ gameOfLife neighs (corner1, corner2, corner3, corner4) = mapMaybe on' . assocs .
         on' (_, _) = Nothing
 
 aliveNeighs :: Array Int [Int] -> [Int] -> UArray Int Int
-aliveNeighs neighs = accumArray (+) 0 (bounds neighs) . concatMap oneAndTwos
-  where oneAndTwos pos = (pos, 1) : map (, 2) (neighs Arr.! pos)
+aliveNeighs neighs alive = runSTUArray $ do
+  a <- newArray (bounds neighs) 0
+  for_ alive $ \pos -> do
+    val <- readArray a pos
+    writeArray a pos (val + 1)
+    for_ (neighs Arr.! pos) $ \npos -> do
+      nval <- readArray a npos
+      writeArray a npos (nval + 2)
+  return a
 
 neigh :: (Int, Int) -> Int -> Int -> [(Int, Int)]
 neigh (y, x) height width =
