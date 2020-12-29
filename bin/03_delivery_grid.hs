@@ -1,11 +1,14 @@
 import AdventOfCode (readInputFile)
 
-import qualified Data.Set as Set
+import Data.Containers.ListUtils (nubOrd)
+
+-- nubOrd tested to be faster than using a Set,
+-- and also faster than using group . sort
 
 type Pos = (Int, Int)
 
-houses :: String -> Set.Set Pos
-houses = Set.fromList . scanl move (0, 0)
+houses :: String -> [Pos]
+houses = scanl move (0, 0)
 
 move :: Pos -> Char -> Pos
 move (x, y) c = case c of
@@ -26,5 +29,6 @@ main :: IO ()
 main = do
   s <- readInputFile
   let (s1, s2) = split s
-  print (Set.size (houses s))
-  print (Set.size (Set.union (houses s1) (houses s2)))
+      countUnique = length . nubOrd
+  print (countUnique (houses s))
+  print (countUnique (houses s1 ++ houses s2))
