@@ -119,7 +119,7 @@ executable 11_passwords
 
 executable 12_json_numbers
   import: bin, flags
-  build-depends: base, adventofcode
+  build-depends: base, adventofcode, json
   main-is:       12_json_numbers.hs
 
 executable 13_optimal_seating
