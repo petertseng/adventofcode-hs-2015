@@ -162,7 +162,7 @@ executable 19_molecule_replacement
 
 executable 20_factors
   import: bin, flags
-  build-depends: base, array, directory
+  build-depends: base, directory
   main-is:       20_factors.hs
 
 executable 21_rpg
