@@ -150,5 +150,6 @@ executable 17_containers
 
 executable 18_game_of_life
   import: bin, flags
-  build-depends: base, adventofcode, array
+  -- modifyArray added in array 0.5.6.0
+  build-depends: base, adventofcode, array >= 0.5.6.0
   main-is:       18_game_of_life.hs
